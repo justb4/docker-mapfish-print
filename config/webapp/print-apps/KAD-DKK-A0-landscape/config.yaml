@@ -1,0 +1,54 @@
+throwErrorOnExtraParameters: true
+
+templates:
+  A0 landscape: !template
+    reportTemplate: report.jrxml
+    attributes:
+      titel: !string
+        default: "Kadastrale Kaart"
+      subtitel: !string
+        default: "Kadastrale gemeente XXXXXX"
+      schaal: !string
+        default: "1234"
+      productiedatum: !string
+        default: "dd-mm-jjjj"
+      actualiteitsdatum: !string
+        default: "dd-mm-jjjj"
+        
+      map: !map
+        maxDpi: 400
+        dpiSuggestions: [72, 91, 128, 254, 300, 400]
+        width: 3328
+        height: 2340
+      overviewMap: !overviewMap
+        width: 230
+        height: 260
+        maxDpi: 400
+        zoomFactor: 1
+      scalebar: !scalebar
+        width: 550
+        height: 30
+        default: 
+          align: center
+          intervals: 4
+          fontSize: 8
+          barSize: 6
+          labelDistance: 3
+          lineWidth: 1
+          unit: Meter
+          orientation: horizontalLabelsAbove
+    processors:
+    - !reportBuilder
+      directory: '.'
+    - !createMap
+      inputMapper: {map: map}
+      outputMapper: {mapSubReport: mapSubReport}
+    - !createScalebar {}
+    - !createOverviewMap
+        inputMapper: {
+            map: map,
+            overviewMap: overviewMap
+        }
+        outputMapper: {
+            overviewMapSubReport: overviewMapSubReport
+        }

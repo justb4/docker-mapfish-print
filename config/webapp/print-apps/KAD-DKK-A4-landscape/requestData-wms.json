@@ -1,0 +1,30 @@
+
+{
+  "layout": "A4 landscape",
+  "outputFormat": "pdf",
+  "attributes": {
+    "prodnaam": "Uittreksel Kadastrale Kaart",
+    "schaal": "500",
+    "kadgemnaam": "Veenendaal",
+    "sectie": "B",
+    "perceelnr": "8425",	
+    "map": {
+      "projection": "EPSG:28992",
+      "dpi": 180,
+      "rotation": 0,
+      "center": [165600, 450000],
+      "scale": 1000,
+      "layers": [
+        {
+          "type": "WMS",
+          "layers": ["kadastralekaart"],
+          "baseURL": "http://geodata.nationaalgeoregister.nl/kadastralekaartv3/wms?",
+          "imageFormat": "image/jpeg",
+          "version": "1.3.0",
+          "customParams": {
+          }
+        }
+      ]
+    }
+  }
+}

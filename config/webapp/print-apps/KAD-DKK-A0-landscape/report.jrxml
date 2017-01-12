@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-12-09T14:44:06 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="3368" pageHeight="2380" orientation="Landscape" columnWidth="3328" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a3e59f5-6675-48cf-ad74-9c42b5a5b290">
+	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+	<property name="com.jaspersoft.studio.unit." value="mm"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<parameter name="titel" class="java.lang.String"/>
+	<parameter name="subtitel" class="java.lang.String"/>
+	<parameter name="schaal" class="java.lang.String"/>
+	<parameter name="productiedatum" class="java.lang.String"/>
+	<parameter name="actualiteitsdatum" class="java.lang.String"/>
+	<parameter name="mapSubReport" class="java.lang.String"/>
+	<parameter name="scalebarSubReport" class="java.lang.String"/>
+	<parameter name="overviewMapSubReport" class="java.lang.String"/>
+	<title>
+		<band height="2340">
+			<rectangle>
+				<reportElement x="0" y="0" width="3328" height="2340" forecolor="#000000" uuid="7baebf20-aa3e-44e5-8064-74fad81eec7c">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#007395"/>
+				</graphicElement>
+			</rectangle>
+			<subreport>
+				<reportElement mode="Transparent" x="0" y="0" width="3328" height="2340" uuid="62789156-3445-4838-af7d-0ed0914b78c2">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<subreportExpression><![CDATA[$P{mapSubReport}]]></subreportExpression>
+			</subreport>
+			<rectangle>
+				<reportElement x="162" y="2029" width="550" height="30" uuid="4644dc42-11b8-4a01-b659-de14e87ca2a0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2060" width="890" height="280" uuid="aeb00109-4b4f-460b-8f34-63858b395d07"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="2160" width="190" height="20" uuid="fcea4865-8b0e-4ccb-9e49-87a88f3a933d">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Legenda"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="2190" width="170" height="10" uuid="819ca700-3ae1-4612-8ea5-b0456f1ec5bd">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Perceelnummer"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="2200" width="170" height="10" uuid="ce844244-7716-4096-a606-fdd385c7ef87">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Huisnummer"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="2210" width="170" height="10" uuid="66ae5a6e-13f5-448b-95a8-1dc4d2c017e4">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Vastgestelde kadastrale grens"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="2220" width="170" height="10" uuid="16416b35-6def-4470-a46b-33bd58089f69">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Voorlopige kadastrale grens"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="2230" width="170" height="10" uuid="6780a3a5-dfdc-4c0b-95fb-9cd5dfffe7e5">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Administratieve kadastrale grens"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="2240" width="170" height="10" uuid="47bb2e4e-da85-4ab9-9c4e-9ded0ffca971">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Bebouwing"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="2250" width="170" height="10" uuid="36001f45-c3ce-4f15-aeb6-5c8df9661d7a">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Overige topografie"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="2190" width="40" height="11" uuid="3c15d69e-aff4-47a2-b0c6-f9d8838c1423">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="9" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[12345]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="2200" width="40" height="11" forecolor="#FF0000" uuid="a5190e39-c231-4de6-a401-11488f063f20">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[25]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="9" y="2215" width="41" height="1" forecolor="#000000" uuid="ef367b34-ecff-4a06-a7c9-0e73ddf4e381">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="9" y="2225" width="41" height="1" forecolor="#CC9900" uuid="21bc6157-e4b0-490f-bf23-1afb3eb1d697">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="9" y="2245" width="41" height="1" forecolor="#FC0905" uuid="2f4f8f95-531f-455c-a475-9b3ccfc3c1bf">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="9" y="2255" width="41" height="1" forecolor="#000000" uuid="e688a353-a86d-4dcf-982a-0e86adbb8909">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="9" y="2235" width="41" height="1" forecolor="#5BF5D1" uuid="83e10a5e-fe22-427d-a3ff-570491b35c67">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="260" y="2160" width="300" height="20" forecolor="#0A0A0A" backcolor="#FFFFFF" uuid="278cffe1-9ea9-4ceb-975c-dc6c1a9b8017">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Kaartschaal                : "+$P{schaal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="2178" width="300" height="17" forecolor="#0A0A0A" backcolor="#FFFFFF" uuid="27359b44-942b-41ad-9f41-2329de4b2174">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Productiedatum          : "+$P{productiedatum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="2197" width="300" height="17" forecolor="#0A0A0A" backcolor="#FFFFFF" uuid="a63dbc19-6b5d-4e2e-82b1-52ac3be17f79">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Actualiteitsdatum        : "+$P{actualiteitsdatum}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement key="" mode="Opaque" x="162" y="2030" width="550" height="30" uuid="2c039463-974e-470f-a937-387dc09f04ba">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<subreportExpression><![CDATA[$P{scalebarSubReport}]]></subreportExpression>
+			</subreport>
+			<image>
+				<reportElement x="10" y="2071" width="79" height="79" uuid="6b91c97a-7b00-4aeb-8036-7437c13501dc"/>
+				<imageExpression><![CDATA["logo.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="10" y="2306" width="246" height="8" uuid="807fc415-ebcd-41ef-a31d-8e6ebd265d21">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CC-BY Kadaster"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="2322" width="246" height="8" uuid="305623b9-dd17-4a1f-9a49-784eedf218d1">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["eigendomsrechten voor, waaronder het auteursrecht en het databankenrecht."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="2314" width="246" height="8" uuid="0f33d427-fe15-40c9-927c-4256415d06c4">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["De Dienst voor het Kadaster en openbare registers behoudt zich de intellectuele"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="2290" width="246" height="8" uuid="4067d2a4-484b-4d4c-8b18-f52535931b48">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Aan deze kaart kunnen geen betrouwbare maten worden ontleend"]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement mode="Transparent" x="650" y="2071" width="230" height="260" uuid="54154a34-4a83-4d74-9d3e-d6b50dcda6d1">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<subreportExpression><![CDATA[$P{overviewMapSubReport}]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="260" y="2060" width="300" height="30" forecolor="#007395" backcolor="#FFFFFF" uuid="09635cf1-8d13-43dc-ab45-5ceedb6acf3c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="2092" width="300" height="28" forecolor="#007395" backcolor="#FFFFFF" uuid="3c203ae1-75e1-4c0c-bdda-d7235afb497a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{subtitel}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

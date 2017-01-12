@@ -1,0 +1,47 @@
+
+{
+  "layout": "A0 landscape",
+  "outputFormat": "pdf",
+  "attributes": {
+    "titel": "Kadastrale Kaart",
+    "subtitel": "Kadastrale gemeente Lelystad",
+    "schaal": "5000",
+    "productiedatum": "6 december 2016",
+    "actualiteitsdatum": "1 december 2016",	
+    "map": {
+      "projection": "EPSG:28992",
+      "dpi": 180,
+      "rotation": 0,
+      "center": [160000, 502000],
+      "scale": 1000,
+      "layers": [
+        {
+          "type": "WMS",
+		  "layers": ["kadastralekaart"],
+          "baseURL": "http://geodata.nationaalgeoregister.nl/kadastralekaartv3/wms?",
+          "imageFormat": "image/png",
+          "version": "1.3.0",
+          "customParams": {
+          }
+        }
+      ]
+    },
+    "overviewMap": {
+	  "projection": "EPSG:28992",
+      "dpi": 90,
+      "rotation": 0,
+      "bbox": [10000,300000, 280000,630000],
+      "layers": 
+      [
+        {
+          "type": "WMS",
+          "layers": ["provincies"],
+          "baseURL": "http://geodata.nationaalgeoregister.nl/bestuurlijkegrenzen/wms?",	
+          "imageFormat": "image/png",
+          "version": "1.3.0",
+          "customParams": {}
+        }
+      ]	
+	}
+  }
+}

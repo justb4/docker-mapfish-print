@@ -1,0 +1,39 @@
+throwErrorOnExtraParameters: true
+
+templates:
+  A4 landscape: !template
+    reportTemplate: report.jrxml
+    attributes:
+      prodnaam: !string
+        default: "DKK"
+      schaal: !string
+        default: "1000"
+      kadgemnaam: !string
+        default: "Apeldoorn"
+      sectie: !string
+        default: "A"
+      perceelnr: !string
+        default: "12345"
+
+      map: !map
+        maxDpi: 400
+        width: 800
+        height: 410
+      scalebar: !scalebar
+        width: 300
+        height: 20
+        default: 
+          align: center
+          intervals: 5
+          fontSize: 6
+          barSize: 4
+          labelDistance: 2
+          lineWidth: 1
+          orientation: horizontalLabelsAbove
+    processors:
+    - !reportBuilder
+      directory: '.'
+    - !createMap
+      inputMapper: {map: map}
+      outputMapper: {mapSubReport: map}
+    - !createScalebar {}
