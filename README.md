@@ -15,9 +15,9 @@ you may use your own ``docker build`` commandline.
 The files under the  [config](config) dir are automatically integrated in the Docker image as follows:
 
 - [config/tomcat/setenv.sh](config/tomcat/setenv.sh): Tomcat options like for memory, proxies etc
-- [webapp/print-apps](webapp/print-apps): your own custom templates to be integrated in the MFP Demo app
-- [webapp/WEB-INF/web.xml](webapp/WEB-INF/web.xml): override web.xml for Tomcat MFP .war
-- [webapp/index.html](webapp/index.html): override index.html, the demo
+- [config/webapp/print-apps](config/webapp/print-apps): your own custom templates to be integrated in the MFP Demo app
+- [config/webapp/WEB-INF/web.xml](config/webapp/WEB-INF/web.xml): override web.xml for Tomcat MFP .war
+- [config/webapp/index.html](config/webapp/index.html): override index.html, the demo
 
 ## Running
 
