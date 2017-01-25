@@ -69,6 +69,9 @@ RUN if [ "$TOMCAT_EXTRAS" = false ]; then \
     rm -rf $TC_DEPLOY_DIR/manager; \
   fi;
 
+# Make deploy dir (may have be deleted)
+RUN mkdir -p $MFP_DEPLOY_DIR
+
 # Get the MFP .war
 RUN wget $MFP_WAR -O /tmp/print.war
 
@@ -76,11 +79,17 @@ RUN wget $MFP_WAR -O /tmp/print.war
 RUN unzip /tmp/print.war -d $MFP_DEPLOY_DIR \
     && rm /tmp/print.war
 
+# Optionally remove the MFP standard print apps/examples
+ARG MFPRINT_APPS=true
+RUN if [ "$MFPRINT_APPS" = false ]; then \
+    rm -rf $MFP_DEPLOY_DIR/print-apps; \
+  fi;
+
 # Eigen bestanden toevoegen
 ADD config /tmp/config
 
 # Copy configuration for Tomcat
-RUN cp /tmp/config/tomcat/setenv.sh $TC_BIN_DIR
+RUN cp -r /tmp/config/tomcat/* $CATALINA_HOME
 
 # Copy webapp config en eigen print-apps
 RUN cp -rf /tmp/config/webapp/* $MFP_DEPLOY_DIR

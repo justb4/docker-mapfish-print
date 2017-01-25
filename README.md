@@ -10,14 +10,22 @@ With the script [build.sh](build.sh) the Docker image can be build
 from the [Dockerfile](Dockerfile) but this is not really necessary as
 you may use your own ``docker build`` commandline.
 
+Build argumments with values if not passed to build:
+
+- **IMAGE_TIMEZONE** - timezone of Docker image, default ``"Europe/Amsterdam"``
+- **TOMCAT_EXTRAS** - include Tomcat docs, examples etc? Best to leave out, default ``false``
+- **MFPRINT_APPS** - include Standard MFP print-apps (examples)? default ``true``
+
 ### Build Options
 
 The files under the  [config](config) dir are automatically integrated in the Docker image as follows:
 
-- [config/tomcat/setenv.sh](config/tomcat/setenv.sh): Tomcat options like for memory, proxies etc
-- [config/webapp/print-apps](config/webapp/print-apps): your own custom templates to be integrated in the MFP Demo app
+- [config/tomcat/*](config/tomcat): override any files in the standard Tomcat install (see below)
+- [config/tomcat/bin/setenv.sh](config/tomcat/bin/setenv.sh): Tomcat options like for memory, proxies etc
+- [config/tomcat/conf/server.xml](config/tomcat/bin/setenv.sh): server settings like port (default 8080) and threads
+- [config/webapp/print-apps](config/webapp/print-apps): your own custom templates to be integrated in the MFP webapp
 - [config/webapp/WEB-INF/web.xml](config/webapp/WEB-INF/web.xml): override web.xml for Tomcat MFP .war
-- [config/webapp/index.html](config/webapp/index.html): override index.html, the demo
+- [config/webapp/index.html](config/webapp/index.html): override index.html, the demo page
 
 ## Running
 

@@ -15,7 +15,6 @@ VOL_MAP="${VOL_MAP_LOGS}"
 # If we need to expose 8080 from host, but we use Apache AJP
 # PORT_MAP="-p 8080:8080"
 PORT_MAP="-p 8080:8080"
-LINK_MAP="--link ${PG_HOST}:${PG_HOST}"
 
 # Stop and remove possibly old containers
 sudo docker stop ${NAME} > /dev/null 2>&1
