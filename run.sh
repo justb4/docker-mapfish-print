@@ -3,7 +3,7 @@
 # Run MapFish Print3 Docker image with options
 
 NAME="print"
-IMAGE="kadaster/print:3.7"
+IMAGE="justb4/print:3.7"
 
 LOG="/var/log/"
 TC_LOG="${LOG}/tomcat-print"
