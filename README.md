@@ -3,6 +3,9 @@
 Docker image and tools for MapFish Print (currently v3).
 Initially this Docker image is provided for the [Dutch Kadaster](http://www.kadaster.nl)
 but may be useful in other applications.
+See my repo [docker-mapfish-print2](https://github.com/justb4/docker-mapfish-print2) for 
+a MapFish Print version 2 legacy Docker Image.
+
 
 ## Building
 
