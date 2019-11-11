@@ -1,4 +1,4 @@
-# docker-mfprint
+# docker-mapfish-print (formerly docker-mfprint)
 
 Docker image and tools for MapFish Print (currently v3).
 Initially this Docker image is provided for the [Dutch Kadaster](http://www.kadaster.nl)
