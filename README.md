@@ -6,6 +6,9 @@ but may be useful in other applications.
 See my repo [docker-mapfish-print2](https://github.com/justb4/docker-mapfish-print2) for 
 a MapFish Print version 2 legacy Docker Image.
 
+## Log4J 
+
+This project does **not** use LogJ (nor v1 nor v2)! It uses [Logback](http://logback.qos.ch/).
 
 ## Building
 
