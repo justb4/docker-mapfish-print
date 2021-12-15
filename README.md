@@ -8,7 +8,7 @@ a MapFish Print version 2 legacy Docker Image.
 
 ## Log4J 
 
-This project does **not** use LogJ (nor v1 nor v2)! It uses [Logback](http://logback.qos.ch/).
+This project does **not** use Log4J (nor v1 nor v2)! It uses [Logback](http://logback.qos.ch/).
 
 ## Building
 
